@@ -3107,12 +3107,106 @@ img.u-pull-left {
 }
 
 /* ------------------------------------------------------------------- 
+ * ## home profile section
+ * ------------------------------------------------------------------- */
+.home-profile-wrap {
+    margin-top    : var(--vspace-2);
+    margin-bottom : var(--vspace-2);
+}
+
+.home-profile-wrap .column {
+    display       : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-profile-wrap h3 {
+    margin-top : 0;
+}
+
+.home-profile-card {
+    background      : var(--color-white);
+    border          : 1px solid var(--color-border);
+    border-radius   : 10px;
+    padding         : var(--vspace-1_5);
+    text-align      : center;
+    box-shadow      : 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition      : all 0.3s ease-in-out;
+}
+
+.home-profile-card:hover {
+    box-shadow : 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform  : translateY(-2px);
+}
+
+.home-profile-card img {
+    width           : 190px;
+    height          : 190px;
+    object-fit      : cover;
+    border-radius   : 50%;
+    margin          : 0 auto var(--vspace-1);
+    border          : 3px solid var(--color-gray-2);
+    display         : block;
+}
+
+.home-profile-card h4 {
+    margin-top      : 0;
+    margin-bottom   : var(--vspace-0_5);
+    font-size       : var(--text-lg);
+}
+
+.home-profile-card p {
+    margin          : 0;
+    font-size       : calc(var(--text-size) * 0.9444);
+    line-height     : var(--vspace-0_875);
+    color           : var(--color-text-light);
+}
+
+/* ------------------------------------------------------------------- 
  * responsive:
  * project-wide and shared styles
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
     .bricks {
         --brick-padding : 2.8rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home-profile-card img {
+        width  : 170px;
+        height : 170px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home-profile-wrap {
+        margin-bottom : var(--vspace-1_5);
+    }
+    
+    .home-profile-card img {
+        width  : 150px;
+        height : 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-profile-wrap .column {
+        margin-bottom : var(--vspace-1);
+    }
+    
+    .home-profile-card {
+        padding : var(--vspace-1);
+    }
+    
+    .home-profile-card img {
+        width  : 120px;
+        height : 120px;
+        margin-bottom : var(--vspace-0_75);
+    }
+    
+    .home-profile-card h4 {
+        font-size : var(--text-md);
     }
 }
 
@@ -3247,7 +3341,7 @@ img.u-pull-left {
 }
 
 .ss-home .s-header__branding a {
-    color : white;
+    color : #333333;
 }
 
 /* --------------------------------------------------------------------
@@ -5397,7 +5491,7 @@ body.search-is-visible .s-header__search-inner {
 }
 
 .hero__entry-desc {
-    color: rgba(255, 255, 255, 0.95);
+    color: #333333;
     font-size: 1.95rem;
     line-height: 1.75;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
